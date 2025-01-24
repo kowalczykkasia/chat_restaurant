@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+  - story: welcome and say goodby
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: welcome and show possibilities
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: actions
+      - action: utter_actions
+
+  - story: user asks when restaurant is open
+    steps:
+      - intent: list_hours
+      - action: action_list_hours
+
+  - story: user asks about opening hours for specific day
+    steps:
+      - intent: open_hours
+      - action: action_open_hours
+
+  - story: user asks about opening hours on time
+    steps:
+      - intent: open_on
+      - action: action_open_on
+
+  - story: user asks if restaurant is open now
+    steps:
+      - intent: is_open
+      - action: action_is_open
+
+  - story: user asks about menu
+    steps:
+      - intent: menu
+      - action: action_menu
+
+  - story: user wants to order
+    steps:
+      - intent: order
+      - action: action_order
+
+  - story: user wants to order with extra modyfications
+    steps:
+      - intent: extra_order
+      - action: action_extra_order
+
+  - story: user wants to see order
+    steps:
+      - intent: show_order
+      - action: action_show_order
+
+  - story: order with delivery
+    steps:
+      - intent: confirm
+      - action: action_confirm
+      - action: utter_ask_delivery
+      - intent: approve_delivery
+      - action: utter_address
+      - intent: address
+      - action: action_address
+
+  - story: order without delivery
+    steps:
+      - intent: confirm
+      - action: action_confirm
+      - action: utter_ask_delivery
+      - intent: reject_delivery
+      - action: utter_reject_delivery

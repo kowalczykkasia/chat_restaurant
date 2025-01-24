@@ -1,0 +1,459 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hej
+      - cześć
+      - siema
+      - witaj
+      - dzień dobry
+      - dobry wieczór
+      - halo
+      - elo
+      - hejka
+      - witam
+
+  - intent: goodbye
+    examples: |
+      - nara
+      - pa
+      - papa
+      - dobranoc
+      - dzieki
+      - dzięki
+      - narka
+      - do uslyszenia
+      - do nastepnego
+      - na razie
+      - narka
+      - do widzenia
+
+  - intent: actions
+    examples: |
+      - co mogę zrobić?
+      - jak możesz mi pomóc?
+      - co potrafisz?
+      - jakie masz możliwości?
+      - w czym możesz mi pomóc?
+      - jakie usługi oferujesz?
+      - pokaż, co potrafisz
+      - co możesz dla mnie zrobić?
+      - w czym możesz mnie wesprzeć?
+      - opowiedz, jakie masz funkcje
+      - jakie masz opcje?
+      - pokaż dostępne możliwości
+      - jakie wsparcie mogę od ciebie otrzymać?
+      - przedstaw swoje funkcjonalności
+      - opisz, co możesz zrobić
+      - jakie działania możesz wykonać?
+      - powiedz, jak działasz
+      - w czym możesz się przydać?
+      - jakie opcje są dostępne?
+      - co można z tobą zrobić?
+      - co moge zrobic
+      - jak mozesz mi pomóc
+      - co potrafiz
+      - jakie masz mozliwosci
+      - w czym mozesz mi pomóc
+      - jakie uslugi oferujes
+      - pokaz co potrafisz
+      - co mozesz dla mnie zrobic
+      - w czym mozesz mnie wesprzec
+      - opowiedz jakie masz funkcje
+      - jakie masz opcje
+      - pokaz dostepne mozliwosci
+      - jakie wsparcie moge od ciebie otrzymac
+      - przdstaw swoje funkcjonalnosci
+      - opisz co mozesz zrobic
+      - jakie dzialania mozesz wykonac
+      - powiedz jak dzialasz
+      - w czm mozesz sie przydac
+      - jakie opcje sa dostepne
+      - co mozna z toba zrobic
+      - co moznz zrobic
+      - jakie mas opcje
+      - w czym mmogesz pomoc
+      - jakie fukncje masz
+      - co mozesz dla mnei zrobic
+      - jakie dzialania mozna wykonac
+      - powiezz jakie masz mozliwosci
+      - pokaz swoje mozliwosci
+      - jakie mas mozliwsci
+      - co mozna z tb zrobic
+      - co mi powiesz
+
+
+  - intent: list_hours
+    examples: |
+      - kiedy restauracja jest otwarta
+      - jakie są godziny otwarcia
+      - w jakich godzinach restauracja jest czynna
+      - kiedy otwarta jest restauracja
+      - jakie godziny otwarcia ma restauracja
+      - o której godzinie otwieracie
+      - o ktorej godzinie otwieracie
+      - o ktorej restauracja jest otwarta
+      - jakie macie godziny otwarcia
+      - kiedy jest otwarte
+      - w jakich godzinach jest otwarte
+      - kiedy moge przyjsc
+      - jakie sa wasze godziny otwarcia
+      - jakie są wasze godziny otwarci
+      - jak wygladaja godziny otwarcia
+      - kiedy restauracjia jest otwarta
+      - jakie sa godziny otwracia
+      - w jakich godzinah restauracja jest czynna
+      - kedy otwarta jest restauracja
+      - jakie godziny otwracia ma restauracja
+      - o ktorej godzienie otwieracie
+      - o ktorej resauracja jest otwarta
+      - jakie macie godziny otwracia
+      - kiedy jest otwart
+      - w jakich godzianch jest otwarta
+      - kiedy mgoe przyjsc
+      - jakie sa waze godziny otwarcia
+      - w jakich gdozinach restauracja jest otwarta
+      - jakie sa godziny dzialania restauracji
+      - o ktorej otwieracie
+      - jakie są wasze godzny otwarcia
+      - w jakie godziny restauracja jest otwrata
+
+  - intent: is_open
+    examples: |
+      - czy restauracja jest teraz otwarta
+      - czy jesteście otwarci w tej chwili
+      - czy restauracja obecnie przyjmuje klientów
+      - czy teraz jest otwarte
+      - czy restauracja jest obecnie czynna
+      - czy dzisiaj macie otwarte
+      - czy teraz macie otwarte
+      - czy aktualnie jesteście otwarci
+      - restauracja jest otwarta teraz
+      - czy w tej chwili jest otwarte
+      - czy otwarte jest teraz
+      - czy otwarte jest w tej chwili
+      - czy restaracja jest teraz otwarta
+      - czy resauracja obecnie przyjmuje klientów
+      - cz teraz jest otwrte
+      - czy restauracja jest obcnie czynna
+      - czy dzisja macie otwatre
+      - czy aktualnie jestescie otwrcie
+      - czy aktualne jest otwarte
+      - czy restaracja przyjmuje klientow teraz
+      - cz jest otwarte teraz
+      - czy macie otwarte teraz
+      - czy w tej chwili macie otwatre
+      - restauracja obecej przyjmuje klintow
+      - restauracja teraz jest czynna
+      - czy jest otwarte obence
+      - czy teraz mozna przyjsc
+      - czy obecnie jest czynn
+      - czy terz macie otwrcie
+      - czy rsetauracja dziala teraz
+      - czy rsestauracja teraz przyjmuje klientow
+
+  - intent: open_hours
+    examples: |
+      - czy jesteście otwarci w [sobotę](day)
+      - czy jesteście otwarci w [czwartek](day)
+      - czy restauracja jest otwarta w [poniedziałek](day)
+      - czy restauracja będzie otwarta w [piątek](day)
+      - jakie są godziny otwarcia w [środę](day)
+      - jakie są godziny otwarcia w [niedzielę](day)
+      - kiedy zamykacie w [piątek](day)
+      - czy restauracja działa w [sobotę](day)
+      - jakie są godziny pracy w [poniedziałek](day)
+      - o której godzinie zamykacie w [środę](day)
+      - czy w [czwartek](day) można was odwiedzić
+      - czy otwieracie w [niedzielę](day)
+
+  - intent: open_on
+    examples: |
+      - czy restauracja jest otwarta w [poniedziałek](day) o [17:30](hour)
+      - czy będziecie otwarci o [13:00](hour) w [sobotę](day)
+      - czy otwarte jest o [14:30](hour) w [niedzielę](day)
+      - czy można przyjść w [piątek](day) o [18:00](hour)
+      - czy restauracja działa w [czwartek](day) o [12:00](hour)
+      - czy o [15:00](hour) w [środę](day) macie otwarte
+      - czy w [poniedziałek](day) o [16:45](hour) restauracja będzie otwarta
+      - czy w [sobotę](day) otwieracie o [11:30](hour)
+      - o której godzinie otwieracie w [niedzielę](day)
+      - czy restauracja jest czynna w [poniedziałek](day) o [20:15](hour)
+
+  - intent: menu
+    examples: |
+      - pokaż mi menu
+      - czy mogę zobaczyć menu
+      - co moge zamowic
+      - wyświetl menu
+      - pokaż dostępne dania
+      - co macie do jedzenia
+      - jakie są dostępne posiłki
+      - pokaż menu restauracji
+      - co można zamówić
+      - co macie w ofercie
+      - jakie są opcje jedzenia
+      - proszę o menu
+      - co oferujecie do zjedzenia
+      - wylistuj dania
+      - jakie są dostępne potrawy
+      - co mogę zjeść
+      - pokaż mi co macie w menu
+      - czy moge zobaczyc menu
+      - pokaz mi mnenu
+      - czy mgoę zobaczyc menu
+      - wyświelt menu
+      - jakie macie dania
+      - jakie sa opcje jedzena
+      - co można zjeść
+      - pokazd dostępne dania
+      - prosze o menu
+      - co oferjuecie do jedzenia
+      - wyswietl mnenu
+      - jakie sa potrawy
+      - pokaż mi co macie w oferce
+      - jakie są opcje
+      - jakie maci potrawy
+      - czy mogę sprawdzić menu
+      - co oferujeci w menu
+
+  - intent: order
+    examples: |
+      - chciałbym zamówić [Burger](item)
+      - dodaj [Pizza](item) do mojego zamówienia
+      - poproszę jednego [Hot-doga](item)
+      - chcę [Hot-doga](item)
+      - czy mogę zamówić [Pizza](item)
+      - [Lasagne](item) poproszę
+      - chciałbym dostać [Spaghetti Carbonara](item)
+      - zamawiam [Burger](item)
+      - dodaj mi [Pizza](item)
+      - proszę o [Hot-doga](item)
+      - czy mogę zamówić [Lasagne](item)
+      - chciałbym zamówić [Spaghetti Carbonara](item)
+      - proszę [Burger](item)
+      - poproszę [Pizza](item)
+      - chcę zamówić [Hot-doga](item)
+
+  - intent: extra_order
+    examples: |
+      - chciałbym zamówić [Burger](item), ale [bez
+      ](extra_keyword) [cebuli](extra_item)
+      - dodaj [Pizza](item) do mojego zamówienia [z
+      ](extra_keyword) [pieczarkami](extra_item)
+      - czy mogę zamówić [Pizza](item), ale [bez
+      ] dodatkowych](extra_keyword) [pieczarek](extra_item)
+      - [Lasagne](item) poproszę [z dodatkowym](extra_keyword) [serem](extra_item)
+      - chciałbym zamówić [Spaghetti Carbonara](item), ale [bez
+      ](extra_keyword) [ketchupu](extra_item)
+      - zamawiam [Burger](item) [bez
+      ](extra_keyword) [pomidorów](extra_item)
+      - dodaj [Pizza](item) [z dodatkowym](extra_keyword) [sosem](extra_item)
+      - czy mogę zamówić [Lasagne](item) [z
+      ](extra_keyword) [parmezanem](extra_item)
+      - poproszę [Hot-doga](item), ale [bez
+      ](extra_keyword) [musztardy](extra_item)
+      - chciałbym [Spaghetti](item) [z
+      ](extra_keyword) [czosnkiem](extra_item)
+      - [Pizza](item) poproszę [z dodatkowym](extra_keyword) [sosem czosnkowym](extra_item)
+      - zamawiam [Burger](item), ale [bez
+      ](extra_keyword) [sałaty](extra_item)
+      - czy mogę zamówić [Hot-doga](item) [z
+      ](extra_keyword) [chili](extra_item)
+      - poproszę [Lasagne](item) [bez
+      ](extra_keyword) [szpinaku](extra_item)
+
+
+  - intent: show_order
+    examples: |
+      - pokaż moje zamówienie
+      - wyświetl moje zamówienie
+      - czy mogę zobaczyć moje zamówienie
+      - pokaż zamówienie
+      - wylistuj moje zamówienie
+      - co zamówiłem
+      - jakie są pozycje w moim zamówieniu
+      - pokaż mi co zamówiłem
+      - czy mogę sprawdzić moje zamówienie
+      - wyswietl moje zamowienie
+      - jakie są pozycje mojego zamowienia
+      - czy moge zobaczyc zamowienie
+      - co mam w zamowieniu
+      - wyswietl zamowienie
+      - czy moge sprawdzić zamówienie
+      - pokaz moje zamowienie
+      - co jest w zamowieniu
+      - lista mojego zamowienia
+      - pokaż co zamowilem
+      - co zlozylem w zamowieniu
+
+  - intent: confirm
+    examples: |
+      - potwierdź zamówienie
+      - to wszystko
+      - to już wszystko ode mnie
+      - zamówienie potwierdzone
+      - potwierdzam zamówienie
+      - tak, potwierdzam
+      - wszystko się zgadza
+      - proszę potwierdzić zamówienie
+      - kończę zamawianie
+      - zatwierdź zamówienie
+      - tak, to już wszystko
+      - proszę zakończyć zamówienie
+
+  - intent: approve_delivery
+    examples: |
+      - yes
+      - si
+      - tak
+      - yhym
+      - mhm
+      - oczywiście
+      - jasne
+      - tak, proszę
+      - zgadzam się
+      - jak najbardziej
+      - pewnie
+      - tak, oczywiście
+      - dokładnie
+      - tak, zgadza się
+      - oczywiscie
+      - tka
+      - ta
+
+  - intent: reject_delivery
+    examples: |
+      - no
+      - nie
+      - nope
+      - raczej nie
+      - nie, odbiorę osobiście
+      - nie, dziękuję
+      - nie teraz
+      - nie, wolę sam odebrać
+      - nie, nie potrzebuję
+      - nie, to wszystko
+      - nie chcę
+      - wolałbym nie
+      - wolę odebrać osobiście
+      - nie, dzięki
+      - nie potrzebuję
+      - nie, sam odbiorę
+
+  - intent: address
+    examples: |
+      - mój adres to [Dom 23](address)
+      - moj adres to [Warszawksa 8](address)
+      - [Krakowska](address)
+      - mozesz dostarczyc do [Kwiatowa 3](address)
+
+  - synonym: Poniedzialek
+    examples: |
+      - poniedziałek
+      - Poniedziałek
+      - Poniedzialek
+      - pon
+      - Pon
+
+  - synonym: Wtorek
+    examples: |
+      - wtorek
+      - Wtorek
+      - wt
+      - Wt
+
+  - synonym: Srode
+    examples: |
+      - środa
+      - środę
+      - Środa
+      - Sroda
+      - Srode
+      - sroda
+      - srode
+      - śr
+      - Śr
+      - Sr
+      - sr
+
+  - synonym: Czwartek
+    examples: |
+      - czwartek
+      - Czwartek
+      - czw
+      - Czw
+
+  - synonym: Piątek
+    examples: |
+      - Piątek
+      - piątek
+      - Piatek
+      - piatek
+      - pt
+      - Pt
+
+  - synonym: Sobota
+    examples: |
+      - Sobota
+      - Sobote
+      - Sobotę
+      - sobota
+      - sobote
+      - sobotę
+      - sb
+      - Sb
+
+  - synonym: Niedziela
+    examples: |
+      - Niedziela
+      - Niedziele
+      - niedziela
+      - niedziele
+      - nd
+      - Nd  
+
+  - synonym: Pizza
+    examples: |
+      - Pizze
+      - pizzę
+      - pizze
+      - Pizze
+      - picka
+      - picke
+
+  - synonym: Burger
+    examples: |
+      - Burgera
+      - burgera
+
+  - synonym: Hot-dog
+    examples: |
+      - hotdoga
+      - hot doga
+      - Hot-doga  
+
+  - synonym: Spaghetti Carbonara
+    examples: |
+      - spaghetti
+      - carbonare
+      - carbonara
+
+  - lookup: extra_keyword
+    examples: |
+      - bez
+      - z
+      - bez dodatkowych
+      - z dodatkiem
+
+  - lookup: extra_item
+    examples: |
+      - cebuli
+      - seru
+      - szpinaku
+      - ketchupu
+      - musztardy
+      - pieczarek
+      - oliwek
+      - salsy

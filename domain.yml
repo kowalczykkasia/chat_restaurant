@@ -1,0 +1,131 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - actions
+  - list_hours
+  - is_open
+  - open_hours
+  - open_on
+  - menu
+  - order
+  - extra_order
+  - show_order
+  - confirm
+  - reject_delivery
+  - approve_delivery
+  - address
+
+actions:
+  - action_list_hours
+  - action_is_open
+  - action_open_hours
+  - action_open_on
+  - action_menu
+  - action_order
+  - action_extra_order
+  - action_show_order
+  - action_confirm
+  - action_address
+
+entities:
+  - day
+  - hour
+  - item
+  - extra_keyword
+  - extra_item
+  - address
+
+slots:
+  day:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: day
+  hour:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: hour
+  item:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: item
+  extra_keyword:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: extra_keyword
+  extra_item:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: extra_item
+  order:
+    type: list
+    mappings:
+      - type: custom
+  address:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: address
+
+responses:
+  utter_greet:
+    - text: "Witamy w naszej returacji! Jak mogę Ci pomóc?"
+    - text: "Cześć! Co mogę dla Ciebie zrobić?"
+    - text: "Hej! W czym mogę Ci pomóc?"
+    - text: "Dzień dobry! Witamy w naszej returacji! Co mogę dla Ciebie zrobić?"
+
+  utter_goodbye:
+    - text: "Pa!"
+    - text: "Do zobaczenia"
+    - text: "Dziękujemy za skorzystanie z usługi! Miłego dnia!"
+    - text: "Do zobaczenia następnym razem!"
+    - text: "Dziękujemy za zaufanie! Do zobaczenia następnym razem!"
+
+  utter_actions:
+    - text: |
+        Możesz mnie zapytać o:
+        - Godziny otwarcia/dni tygodnia
+        - Pozycje w menu
+        - Składanie zamówienia
+        - Dodawanie dodatków do zamówienia
+    - text: |
+        Mogę odpowiedzieć na pytania dotyczące:
+        - Godzin otwarcia i dni działania
+        - Dostępnych pozycji w menu
+        - Składania zamówienia
+        - Personalizacji zamówienia, w tym dodatkowych próśb lub modyfikacji
+    - text: |
+        Oto, w czym mogę Ci pomóc:
+        - Podanie szczegółów dotyczących godzin otwarcia
+        - Wyświetlenie naszego menu
+        - Złożenie zamówienia
+        - Personalizacja zamówienia, w tym dodatkowe prośby
+
+  utter_ask_delivery:
+    - text: "Czy chcesz skorzytać z usługi dostawy do Twojego domu?"
+    - text: "Czy preferujesz dostawę do domu?"
+    - text: "Chciałbyś skorzystać z darmowej dostawy do Twoich drzwi?"
+
+  utter_reject_delivery:
+    - text: "Ok, czekam."
+    - text: "Oczywiście, czekamy na Ciebie."
+
+  utter_address:
+    - text: "Podaj swój adres."
+    - text: "Aby dokończyć zamówienie, podaj swój adres."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
